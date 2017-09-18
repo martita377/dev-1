@@ -1,0 +1,30 @@
+{
+  "name": "kodilla-grunt",
+  "version": "1.0.0",
+  "description": "grunt project",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martita377/dev-1.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Marta Para",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martita377/dev-1/issues"
+  },
+  "homepage": "https://github.com/martita377/dev-1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
