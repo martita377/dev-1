@@ -70,7 +70,7 @@ header {
         transition: background, color 1s ease-in-out; }
         header nav ul li a:hover {
           color: #02C7EA;
-          background: #ccc; }
+          background: rgba(0, 0, 0, 0.5); }
 
 /* HERO */
 .hero {
@@ -143,7 +143,7 @@ header {
   opacity: 0;
   transition: opacity 1s ease-in-out; }
   .gallery [class*='row-'] [class*='col-'] .layer i {
-    background: #ccc;
+    background: rgba(0, 0, 0, 0.5);
     color: #000;
     border-radius: 3px;
     font-size: 20px;
@@ -483,9 +483,9 @@ footer {
     order: 1; }
 
   .white p {
-    padding-left: 10px;
     padding-right: 10px; }
-  .white h1 {
+  .white h1,
+  .white p {
     padding-left: 10px; }
 
   /*NUMBERS */
@@ -593,8 +593,7 @@ footer {
 
   .banners {
     margin: 0 auto;
-    padding: 30px;
-    margin: 0; }
+    padding: 30px; }
 
   .mobile {
     display: none; }
