@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800') 
+@import url('https://fonts.googleapis.com/css?family=Fascinate|Suez+One') 
+
+/* GLOBAL */
+
+$grey: #313332
+$white: #fff
+$hov: #02C7EA
+$slogan_bg: rgba(61, 61, 61, 0.7) 
+$layer_bg: rgba(0, 0, 0, 0.5) 
+$footer_bg: #313234
+$rights_bg: #252726
+
+body 
+	margin: 0 
+	font-family: 'Open Sans', sans-serif 
+ 
+*  
+	box-sizing: border-box 
+ 
+.container  
+	width: 100% 
+	max-width: 1200px 
+	margin: 0 auto 
+ 
+h1  
+	font-size: 40px 
+	color: $white 
+	font-weight: 800 
+ 
+h2  
+	font-size: 26px  
+	font-weight: 800 
+	
+h1, h2
+	text-transform: uppercase
+ 
+h3  
+	font-size: 20px 
+	font-weight: 400 
+
+h2, h3
+	color: $grey
+	transition: color 1s ease-in-out
+	
+p  
+	color: $grey
+	font-size: 18px 
+ 
+.clearfix
+	&:before,
+	&:after
+		content: ''
+		display: table
+	&:after 
+		clear: both
+ 
+	
+/* HEADER */
+ 
+header
+	margin-bottom: 0 
+	background: $grey 
+	padding: 0 	
+	nav
+		img
+			margin-top: 5px 	
+		ul  
+			margin: 0 
+			list-style-type: none 
+			float: right 
+			font-size: 0 			
+			li  
+				display: inline-block 
+				padding: 0 				
+				a  
+					color: $white
+					text-decoration: none 
+					text-transform: uppercase 
+					display: block 
+					line-height: 70px 
+					font-weight: 600 
+					font-size: 20px 
+					padding: 0 30px 
+					transition: background, color 1s ease-in-out 
+					&:hover
+						color: $hov
+						background: #ccc 
+
+
+/* HERO */
+.hero  
+	width: 100% 
+	height: 100vh 
+	background: #000 url(https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?w=1260&h=750&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+	padding-top: 40vh 
+ 
+.slogan  
+	background: $slogan_bg
+	float: right 
+	min-width: 45vw 
+	padding: 10px 50px 10px 20px 
+ 
+.thin  
+	font-weight: 400 
+ 
+/* 3 ICONS */
+
+.icons
+	float: left 
+	min-width: 250px 
+	margin: 0 auto 
+	cursor: pointer 
+	
+.row
+	margin: 40px auto 
+	padding: 50px 0 
+	text-align: center 
+	overflow: auto
+	
+	.icons
+		i  
+			background: $grey 
+			border-radius: 5px 
+			color: $white 
+			padding: 10px 
+			font-size: 70px 
+			transition: background 1s ease-in-out
+			
+		&:hover 
+			h2
+				color: $hov
+			i
+				background: $hov	
+	 
+
+/* SECTION WITH TEXT */
+.col-12
+	h1  
+		color: $grey
+ 
+
+/* GALLERY - MAIN */
+.gallery  
+	width: 100% 
+	margin: 0 auto 
+	height: 500px 
+	cursor: pointer 
+ 
+.row-1, .row-2  
+	margin: 0 
+	padding: 0 
+	text-align: center 
+ 
+=myclass
+	float: left 
+	margin: 0 auto 
+	height: 250px 
+	
+.row-1>[class*="col-"],
+.row-2>[class*="col-"]
+	+myclass
+ 
+.row-2>[class*="col-"]  
+	font-size: 0 
+
+=myclass_layer
+	line-height: 250px 
+	background: $layer_bg
+	opacity: 0 
+	transition: opacity 1s ease-in-out
+
+.gallery
+	[class*='row-']
+		[class*='col-']
+			.layer  
+				+myclass_layer
+				i  
+					background: #ccc 
+					color: #000 
+					border-radius: 3px 
+					font-size: 20px 
+					font-weight: 900 
+					padding: 5px 
+					margin: 0 5px 
+					
+
+/* GALLERY - IMAGES*/
+.row-1
+	div
+		&:nth-child(1)  
+			background: #000 url(https://images.pexels.com/photos/355925/pexels-photo-355925.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) 0/cover no-repeat  	
+		&:nth-child(2)  
+			background: #000 url(https://images.pexels.com/photos/208768/pexels-photo-208768.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(3)  
+			background: #000 url(https://images.pexels.com/photos/247768/pexels-photo-247768.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(4)  
+			background: #000 url(https://images.pexels.com/photos/208768/pexels-photo-208768.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(5)  
+			background: #000 url(https://images.pexels.com/photos/159164/submarine-underwater-boat-torpedo-tube-torpedeo-159164.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+ 
+.row-2
+	div
+		&:nth-child(1)  
+			background: #000 url(https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(2)  
+			background: #000 url(https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(3)  
+			background: #000 url(https://images.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(4)  
+			background: #000 url(https://images.pexels.com/photos/57007/pexels-photo-57007.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+		&:nth-child(5)  
+			background: #000 url(https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?h=350&auto=compress&cs=tinysrgb) 0/cover no-repeat 
+	 
+
+/* GALLERY - HOVER*/
+.row-1,
+.row-2
+	div
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5)
+			&:hover
+				.layer  
+					opacity: 1  
+ 
+/* TEAM */
+ 
+.person
+	img  
+		border-radius: 50% 
+
+	h3  
+		font-weight: 700 
+ 
+
+.team
+	padding-top: 100px 
+	padding-bottom: 100px 
+	
+	.icons  
+		position: relative 
+		
+	div
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4)
+			&:hover
+				.layer  
+					opacity: 1 
+  
+	.layer  
+		width: 250px 
+		height: 250px 
+		border-radius: 50% 
+		position: absolute 
+		top: 0 
+		right: 0 
+		left: 0 
+		margin: 0 auto 
+		+myclass_layer
+
+		p  
+			color: $white
+			font-weight: 600 
+			position: relative 
+			top: -15px 
+ 
+/* BANNER */
+.banner  
+	background: #000 url(https://cdn.pixabay.com/photo/2016/11/22/14/41/astronaut-1849401__340.jpg) 0/cover no-repeat 
+	position: relative 
+	width: 100% 
+ 
+.white
+	p, 
+	h1  
+		color: $white
+		text-align: left 
+		line-height: 2rem 
+ 
+.italic
+	p  
+		font-style: italic 
+ 
+
+.banners-0, .banners-1  
+	float: left 
+ 
+.banners  
+	margin: 0 auto 
+	padding: 150px 10px 5px 10px 
+	box-sizing: border-box 
+ 
+.mobile
+	img  
+		position: absolute 
+		bottom: 0 
+	 
+.mobile, 
+.mobile-text  
+	height: 350px 
+ 
+/* NUMBERS */
+
+.number  
+	height: 200px 
+	padding: 70px 0 
+ 
+.numbers  
+	float: left 
+	height: auto 
+	text-align: center 
+	margin-bottom: 70px 
+	p  
+		font-size: 60px 
+		font-weight: 900 
+		font-family: 'Suez One', serif 
+		line-height: 0 
+	h3  
+		text-transform: uppercase 
+		color: $hov
+		line-height: 0 
+		font-weight: 700 
+		position: relative 
+		top: -10px 
+ 
+span  
+	white-space: nowrap 
+ 
+/* FOOTER */
+.footer  
+	float: left 
+ 
+.footer-21
+	.footer  
+		height: 100px 
+ 
+.main  
+	height: 400px 
+ 
+footer  
+	background: $footer_bg 
+	margin: 90px 0 0 
+ 
+.rights  
+	background: $rights_bg
+	margin: 0 auto 
+	p  
+		color: $white
+		text-align: center 
+		font-size: smaller 
+		margin: 0 auto 
+ 
+.white
+	h2, .fa  
+		color: $white
+ 
+.footer
+	ul  
+		list-style: none 
+		text-align: left 
+		padding: 0 
+		margin: 0 
+		li  
+			display: inline-block 
+			margin: 0 
+			text-align: center 
+ 
+.main
+	padding: 10px 10px 
+	box-sizing: border-box 
+	ul
+		li
+			.fa  
+				font-size: 25px 
+				background: #00C7E9 
+				height: 42px 
+				width: 42px 
+				line-height: 42px 
+				text-align: center 
+				border-radius: 5px 
+				margin: 0 5px 
+				transition: .5s all 
+				&:hover  
+					transform: scale(1.2) 
+	p  
+		margin-top: 40px 
+	h2  
+		position: relative 
+		&:after  
+			content: '' 
+			height: 135px 
+			border-left: 2px solid white 
+			transform: rotate(90deg) 
+			position: absolute 
+			bottom: -50px 
+			left: 265px 
+	 
+
+/* GRID */
+.col-1  
+	width: 8.334% 
+.col-2  
+	width: 16.667% 
+.col-3  
+	width: 25% 
+.col-4  
+	width: 33.334% 
+.col-5  
+	width: 41.667%  
+.col-6  
+	width: 50% 
+.col-7  
+	width: 58.334% 
+.col-8  
+	width: 66.667% 
+.col-9  
+	width: 75% 
+.col-10  
+	width: 83.334% 
+.col-11  
+	width: 91.667% 
+.col-12  
+	width: 100% 
+
+.col-offset-1  
+	margin-left: 8.334% 
+.col-offset-2  
+	margin-left: 16.667% 
+.col-offset-3  
+	margin-left: 25% 
+.col-offset-4  
+	margin-left: 33.334% 
+.col-offset-5  
+	margin-left: 41.667% 
+.col-offset-6  
+	margin-left: 50% 
+.col-offset-7  
+	margin-left: 58.334% 
+.col-offset-8  
+	margin-left: 66.667% 
+.col-offset-9  
+	margin-left: 75% 
+.col-offset-10  
+	margin-left: 83.334% 
+.col-offset-11  
+	margin-left: 91.667% 
+.col-offset-12  
+	margin-left: 100% 
+
+/* MEDIA */
+
+
+@media (min-width: 768px) and (max-width: 1200px)  
+	.col-m-1  
+		width: 8.33%  
+	.col-m-2  
+		width: 16.66%  
+	.col-m-3  
+		width: 25%  
+	.col-m-4  
+		width: 33.33%  
+	.col-m-5  
+		width: 41.66%  
+	.col-m-6  
+		width: 50%  
+	.col-m-7  
+		width: 58.33%  
+	.col-m-8  
+		width: 66.66%  
+	.col-m-9  
+		width: 75%  
+	.col-m-10  
+		width: 83.33%  
+	.col-m-11  
+		width: 91.66%  
+	.col-m-12  
+		width: 100%  
+    
+	/*HEADER*/
+	header
+		nav
+			ul
+				li
+					a  
+						padding: 0 7px 
+		 
+	/*ICONS*/
+	.icons  
+		padding-left: 20px 
+		padding-right: 20px 
+		 
+	/*TEXT*/
+	.col-12  
+		padding: 0 30px 
+		 
+	/*TEAM*/
+	.team
+		margin-bottom: 0
+		
+		.icons  
+			padding-bottom: 30px 
+
+		 
+	/*BANNER*/
+	.banner  
+		margin-top: 0 
+		 
+	.banners   
+		display: flex  
+		flex-direction: column 
+		margin: 0 
+		padding-top: 30px 
+		 
+	.mobile   
+		order: 2  
+	     
+	.mobile-text   
+		order: 1  
+	     
+	.white
+		p  
+			padding-left: 10px 	
+			padding-right: 10px 
+		h1  
+			padding-left: 10px 
+	     
+	/*NUMBERS*/
+	.numbers  
+		height: auto 
+		margin: 0 auto 
+		padding: 30px auto 
+		text-align: center 
+		 
+	.number  
+		height: auto 
+		padding-bottom: 0 
+		margin-bottom: 0 
+		 
+		
+	/*FOOTER*/
+	.main  
+		height: auto 
+		margin-bottom: 20px 
+		 
+	.footer
+		ul  
+			text-align: center 
+			padding: 0 
+			margin: 20px 
+		 
+ 
+
+@media (max-width: 767px) 
+	.col-s-1  
+		width: 8.33%  
+	.col-s-2  
+		width: 16.66%  
+	.col-s-3  
+		width: 25%  
+	.col-s-4  
+		width: 33.33%  
+	.col-s-5  
+		width: 41.66%  
+	.col-s-6  
+		width: 50%  
+	.col-s-7  
+		width: 58.33%  
+	.col-s-8  
+		width: 66.66%  
+	.col-s-9  
+		width: 75%  
+	.col-s-10  
+		width: 83.33%  
+	.col-s-11  
+		width: 91.66%  
+	.col-s-12  
+		width: 100%  
+    
+	/*HEADER*/
+	header
+		nav
+			margin: 0 auto 
+			text-align: center 
+			
+			ul  
+				float: none 
+				padding: 0 
+		 
+				li  
+					width: 100% 
+					margin: 0 auto 
+			
+					a  
+						width: 100% 		
+		 
+		img  
+			float: none 
+		 
+		 
+		/*HERO*/
+	.slogan
+		h1  
+			font-size: 35px 
+		 
+	/*3 ICONS*/
+	.icons  
+		float: none 
+		margin: 40px auto  
+	 
+	/*TEXT*/
+	.col-12  
+		padding: 0 30px 
+	 
+	/* TEAM */
+	.team  
+		margin: 0 auto 
+	 	
+	.person  
+		margin-bottom: 60px 
+	 
+	/*BANNER*/
+	.banners-0, 
+	.banners-1  
+		float: none 
+		width: 100% 
+		padding: 0 
+		margin: 0 
+		height: auto 
+	 
+	.banners  
+		margin: 0 auto 
+		padding: 30px 
+		margin: 0 
+	 
+	.mobile  
+		display: none 
+	 
+	.mobile-text
+		h1  
+			line-height: 60px 
+	 
+	.white
+		p, 
+		h1  
+			text-align: center 
+	 
+	
+	/*NUMBERS*/
+	.numbers  
+		float: none 
+		height: auto 
+		width: 100% 
+		margin: 0 auto 
+		text-align: center 
+	 
+	.number  
+		height: auto 
+		padding-bottom: 10px 
+	 
+		/*FOOTER*/
+	.main  
+		height: auto 
+		margin-bottom: 20px 
+	 
+	.footer
+		ul  
+			text-align: center 
+			padding: 0 
+			margin: 0 
+	 
+	.white
+		h2  
+			text-align: center 
+	 
+	.main
+		h2
+			&:after  
+				display: none 
+	 
